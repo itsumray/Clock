@@ -1,47 +1,95 @@
+/* Import Google Fonts - Share Tech Mono */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1a1a2e; /* Dark blue background */
-    color: #e0e0e0; /* Light grey text */
+    font-family: 'Share Tech Mono', monospace; /* Apply the digital font */
+    background-color: #0d0d0d; /* Very dark background, almost black */
+    color: #e0e0e0; /* Default text color, though most will be overridden */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh;
     text-align: center;
+    overflow: hidden; /* Prevent scrollbars if content slightly exceeds viewport */
 }
 
 .container {
-    background-color: #0f3460; /* Slightly lighter blue container */
-    padding: 40px 60px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    border: 1px solid #16213e;
+    background-color: #1a1a1a; /* Slightly lighter dark background for the container */
+    padding: 50px 70px; /* Generous padding */
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2); /* Subtle glow around the container */
+    border: 1px solid rgba(0, 255, 255, 0.1); /* Very subtle border */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-h1 {
-    font-size: 2.2em;
-    margin-bottom: 25px;
-    color: #e94560; /* Reddish accent */
+.header-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Keep a more readable font for the title */
+    font-size: 1.6em;
+    color: #777; /* Subdued color for the title */
+    margin-bottom: 30px; /* Space between title and date/time */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.8;
 }
 
-#japanTime {
-    font-size: 3.5em;
-    font-weight: bold;
-    color: #53bf9d; /* Greenish accent */
+.date-display {
+    font-size: 1.8em; /* Size for the date */
+    color: #555; /* More subdued color for the date */
+    margin-bottom: 20px; /* Space between date and time */
     letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
+.time-display {
+    font-size: 8em; /* VERY large font for the time */
+    font-weight: bold;
+    color: #00ffff; /* Bright cyan/aqua for the digital glow */
+    letter-spacing: 8px; /* Spread out the numbers for better readability */
+    text-shadow: 0 0 15px #00ffff, /* Inner glow */
+                 0 0 25px rgba(0, 255, 255, 0.7), /* Medium glow */
+                 0 0 40px rgba(0, 255, 255, 0.5); /* Outer glow */
+    line-height: 1; /* Ensure numbers aren't cut off vertically */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
     .container {
-        padding: 30px 40px;
+        padding: 40px 50px;
     }
-    h1 {
-        font-size: 1.8em;
+    .header-title {
+        font-size: 1.4em;
+        margin-bottom: 20px;
     }
-    #japanTime {
-        font-size: 2.5em;
+    .date-display {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+    .time-display {
+        font-size: 6em; /* Adjust font size for smaller screens */
+        letter-spacing: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 30px;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    }
+    .header-title {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+    }
+    .date-display {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    .time-display {
+        font-size: 3.5em; /* Even smaller for very small screens */
+        letter-spacing: 3px;
     }
 }
