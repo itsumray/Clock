@@ -5,8 +5,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Share Tech Mono', monospace; /* Apply the digital font */
-    background-color: #0d0d0d; /* Very dark background, almost black */
-    color: #e0e0e0; /* Default text color, though most will be overridden */
+    background-color: #000000; /* Black background */
+    color: #FFFFFF; /* White text */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,11 +16,11 @@ body {
 }
 
 .container {
-    background-color: #1a1a1a; /* Slightly lighter dark background for the container */
+    background-color: #000000; /* Black background for the container */
     padding: 50px 70px; /* Generous padding */
     border-radius: 15px;
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2); /* Subtle glow around the container */
-    border: 1px solid rgba(0, 255, 255, 0.1); /* Very subtle border */
+    /* Removed box-shadow and border to keep it strictly black and white. 
+       If you want a subtle white border/shadow, you can add it back with white colors. */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,29 +30,28 @@ body {
 .header-title {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Keep a more readable font for the title */
     font-size: 1.6em;
-    color: #777; /* Subdued color for the title */
+    color: #FFFFFF; /* White color for the title */
     margin-bottom: 30px; /* Space between title and date/time */
     letter-spacing: 1px;
     text-transform: uppercase;
-    opacity: 0.8;
+    opacity: 1; /* Make it fully opaque */
 }
 
 .date-display {
     font-size: 1.8em; /* Size for the date */
-    color: #555; /* More subdued color for the date */
+    color: #FFFFFF; /* White color for the date */
     margin-bottom: 20px; /* Space between date and time */
     letter-spacing: 2px;
-    opacity: 0.9;
+    opacity: 1; /* Make it fully opaque */
 }
 
 .time-display {
     font-size: 8em; /* VERY large font for the time */
     font-weight: bold;
-    color: #00ffff; /* Bright cyan/aqua for the digital glow */
+    color: #FFFFFF; /* White color for the time */
+    /* Removed text-shadow to keep it strictly black and white. 
+       If you want a subtle white glow, you can add it back with white colors. */
     letter-spacing: 8px; /* Spread out the numbers for better readability */
-    text-shadow: 0 0 15px #00ffff, /* Inner glow */
-                 0 0 25px rgba(0, 255, 255, 0.7), /* Medium glow */
-                 0 0 40px rgba(0, 255, 255, 0.5); /* Outer glow */
     line-height: 1; /* Ensure numbers aren't cut off vertically */
 }
 
@@ -78,7 +77,7 @@ body {
 @media (max-width: 480px) {
     .container {
         padding: 30px 30px;
-        box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+        /* Removed box-shadow */
     }
     .header-title {
         font-size: 1.2em;
